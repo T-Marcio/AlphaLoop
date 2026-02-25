@@ -12,6 +12,8 @@ jobs:
       - uses: actions/checkout@v4
         with:
           fetch-depth: 0
+          token: ${{ secrets.GITHUB_TOKEN }}
+          persist-credentials: true
 
       - name: Use Node.js
         uses: actions/setup-node@v4
@@ -49,9 +51,24 @@ jobs:
             touch docs/favicon.ico
           fi
 
+      - name: Debug: show git remote and files
+        run: |
+          echo "-- git --"
+          git --version || true
+          git remote -v || true
+          echo "-- ls docs --"
+          ls -la docs || true
+          echo "-- check gh repo --"
+          echo "GITHUB_REPOSITORY=$GITHUB_REPOSITORY"
+          echo "GITHUB_REF=$GITHUB_REF"
+
+
       - name: Deploy to gh-pages
         uses: peaceiris/actions-gh-pages@v4
         with:
           publish_dir: ./docs
           publish_branch: gh-pages
           github_token: ${{ secrets.GITHUB_TOKEN }}
+          user_name: github-actions[bot]
+          user_email: 41898282+github-actions[bot]@users.noreply.github.com
+          allow_empty_commit: true
