@@ -51,7 +51,7 @@ jobs:
             touch docs/favicon.ico
           fi
 
-      - name: Debug: show git remote and files
+      - name: "Debug: show git remote and files"
         run: |
           echo "-- git --"
           git --version || true
