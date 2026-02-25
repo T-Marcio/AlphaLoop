@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <title>Artículos - Mi Agencia</title>
+    <link rel="stylesheet" href="/src/styles/tailwind.css">
+  </head>
+  <body class="bg-gray-50 text-gray-900">
+    <!-- El header y el footer se cargan dinámicamente desde main.js -->
+
+    <main class="pt-24 p-12 mb-24">
+      <h1 class="text-3xl font-bold text-teal-600 text-center">Artículos</h1>
+      <p class="mt-4 text-gray-700 text-center">Publicaciones y novedades sobre diseño web, negocios digitales y tecnología.</p>
+      
+      <!--Grid de artículos-->
+      <!--<div class="grid md:grid-cols-3 gap-8 mt-12"> -->
+      <div class="mt-6 space-y-4">
+        <!--Artículo 1-->
+        <article class="bg-white shadow rounded-lg p-6 transform transition duration-300 hover:-translate-y-2 hover:shadow-2xl">
+          <img src="/src/assets/articles/articulo1.jpg" alt="imagen articulo 1" class="w-full h-48 object-cover rounded mb-4">
+          <h2 class="text-xl font-semibold">Cómo optimizar tu sitio web para SEO</h2>
+          <p class="text-gray-600 mt-2">Descubre las mejores prácticas para optimizar tu sitio web para motores de búsqueda, 
+            incluyendo la investigación de palabras clave, la optimización de contenido y la mejora de la estructura del sitio para aumentar tu visibilidad en línea y atraer más tráfico orgánico.
+          <a href="/src/pages/articles/articulo1.html"
+             class="mt-4 inline-block bg-teal-600 text-white px-4 py-2 rounded hover:bg-teal-700 transition">
+            leer más
+          </a>
+        </article>
+
+        <!--Artículo 2-->
+        <article class="bg-white shadow rounded-lg p-6 transform transition duration-300 hover:-translate-y-2 hover:shadow-2xl">
+          <img src="/src/assets/articles/articulo2.jpg" alt="imagen articulo 2" class="w-full h-48 object-cover rounded mb-4">
+          <h2 class="text-xl font-semibold">Tendencias modernas en diseño web en 2026</h2>
+          <p class="text-gray-600">Descubre las últimas tendencias en diseño web que están transformando la experiencia del usuario en línea
+            y cómo aplicarlas para que tu sitio web destaque entre la competencia. Desde interfaces minimalistas hasta animaciones interactivas,
+            te mostramos lo que está de moda en el mundo del diseño web.</p>
+          <a href="/src/pages/articles/articulo2.html"
+             class="mt-4 inline-block bg-teal-600 text-white px-4 py-2 rounded hover:bg-teal-700 transition">
+            leer más
+          </a>
+        </article>
+      
+        <!--Artículo 3-->
+        <article class="bg-white shadow rounded-lg p-6 transform transition duration-300 hover:-translate-y-2 hover:shadow-2xl">
+          <img src="/src/assets/articles/articulo3.jpg" alt="imagen articulo 3" class="w-full h-48 object-cover rounded mb-4">
+          <h2 class="text-xl font-semibold">Casos de éxito de negocios digitales</h2>
+          <p class="text-gray-600">Descubre cómo empresas de diferentes sectores han logrado el éxito en el entorno digital, 
+            analizando estrategias clave como la transformación digital, la automatización de procesos y la adopción de tecnologías emergentes.</p>
+          <a href="/src/pages/articles/articulo3.html"
+             class="mt-4 inline-block bg-teal-600 text-white px-4 py-2 rounded hover:bg-teal-700 transition">
+            leer más
+          </a>
+        </article>
+
+        <!--Artículo 4-->
+        <article class="bg-white shadow rounded-lg p-6 transform transition duration-300 hover:-translate-y-2 hover:shadow-2xl">
+          <img src="/src/assets/articles/articulo4.jpg" alt="imagen articulo 4" class="w-full h-48 object-cover rounded mb-4">
+          <h2 class="text-xl font-semibold">Tips para mejorar la experiencia del usuario en tu sitio web</h2>
+          <p class="text-gray-600">Te ayudamos a mejorar la experiencia del usuario en tu sitio web, 
+            considerando aspectos como navegación intuitiva, diseño visual atractivo y contenido claro.
+            Aprende cómo hacer que tu sitio web sea fácil de usar y que los visitantes se sientan cómodos al navegar por él.</p>
+          <a href="/src/pages/articles/articulo4.html"
+             class="mt-4 inline-block bg-teal-600 text-white px-4 py-2 rounded hover:bg-teal-700 transition">
+            leer más
+          </a>
+        </article>
+      </div>
+    </main>
+
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>

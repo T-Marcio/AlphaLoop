@@ -1,0 +1,48 @@
+<section id="listings" class="listings">
+  <aside class="filters">
+    <h3 class="filters__title">Filtros</h3>
+
+    <div class="filters__group">
+      <label for="filterType">Tipo</label>
+      <select id="filterType">
+        <option value="">Todos</option>
+        <option value="Casa">Casa</option>
+        <option value="Departamento">Departamento</option>
+        <option value="Terreno">Terreno</option>
+      </select>
+    </div>
+
+    <div class="filters__group">
+      <label for="filterBeds">Dormitorios</label>
+      <select id="filterBeds">
+        <option value="">Cualquiera</option>
+        <option value="1">1+</option>
+        <option value="2">2+</option>
+        <option value="3">3+</option>
+      </select>
+    </div>
+
+    <div class="filters__group">
+      <label for="filterPrice">Precio máximo (ARS)</label>
+      <input id="filterPrice" type="number" placeholder="Ej: 20000000">
+    </div>
+
+    <div class="filters__actions">
+      <button id="applyFilters" class="btn btn--primary">Aplicar</button>
+      <button id="clearFilters" class="btn btn--secondary">Limpiar</button>
+    </div>
+  </aside>
+
+  <section class="properties">
+    <div class="properties__header">
+      <h2>Propiedades destacadas</h2>
+      <span class="properties__count">
+        Mostrando <strong id="count">0</strong> resultados
+      </span>
+    </div>
+
+    <div id="cardsGrid" class="properties__grid">
+      <!-- Cards inyectadas por JS -->
+    </div>
+  </section>
+</section>

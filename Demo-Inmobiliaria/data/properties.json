@@ -1,0 +1,45 @@
+[
+  {
+    "id": 1,
+    "title": "Casa con jardín",
+    "type": "Casa",
+    "price": 18000000,
+    "beds": 3,
+    "city": "Florencio Varela",
+    "image": "assets/images/prop-1.jpg",
+    "featured": true
+  },
+
+  {
+    "id": 2,
+    "title": "Departamento céntrico",
+    "type": "Departamento",
+    "price": 12000000,
+    "beds": 2,
+    "city": "Quilmes",
+    "image": "assets/images/prop-2.jpg",
+    "featured": true
+  },
+  
+  {
+    "id": 3,
+    "title": "Terreno amplio",
+    "type": "Terreno",
+    "price": 6000000,
+    "beds": 0,
+    "city": "Berazategui",
+    "image": "assets/images/prop-3.jpg",
+    "featured": false
+  },
+  
+  {
+    "id": 4,
+    "title": "PH moderno",
+    "type": "Departamento",
+    "price": 9500000,
+    "beds": 1,
+    "city": "Florencio Varela",
+    "image": "assets/images/prop-4.jpg",
+    "featured": false
+  }
+]

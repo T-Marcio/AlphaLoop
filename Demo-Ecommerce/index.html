@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AlphaLoop E-commerce Demo</title>
+  <link rel="stylesheet" href="styles/styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Open+Sans&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header">
+    <h1>AlphaLoop Shop Demo</h1>
+    <nav>
+      <ul>
+        <li><a href="#productos">Productos</a></li>
+        <li><a href="#carrito">Carrito</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Carrito lateral -->
+  <aside id="carrito" class="carrito">
+    <h2>🛒 Carrito</h2>
+    <ul id="cart-items"></ul>
+    <p id="cart-total">Total: $0</p>
+    <button id="toggle-cart">🛒</button>
+  </aside>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="overlay">
+      <h2>Ofertas exclusivas</h2>
+      <p>Descubre nuestra colección premium</p>
+      <a href="#productos" class="cta">Ver catálogo</a>
+    </div>
+  </section>
+
+    <!-- filtro de Busqueda -->
+  <section class="buscador">
+    <input type="text" id="search" placeholder="Buscar producto...">
+    <select id="filter">
+      <option value="all">Todos</option>
+      <option value="ropa">Ropa</option>
+      <option value="calzado">Calzado</option>
+      <option value="accesorios">Accesorios</option>
+    </select>
+  </section>
+
+
+  <!-- Catálogo -->
+  <section id="productos" class="productos">
+    <h2>Productos destacados</h2>
+    <div class="grid">
+      <div class="card">
+        <img src="assets/images/camisa.jpg" alt="Producto 1">
+        <h3>Camisa elegante</h3>
+        <div id="precio" class="precio">
+          <p>$12.000</p>
+        </div>
+        <section>
+        <button class="add-to-cart">Agregar al carrito</button>
+        <button class="add-to-cart">Comprar</button>
+        </section>
+      </div>
+      <div class="card">
+        <img src="assets/images/zapatillas.jpg" alt="Producto 2">
+        <h3>Zapatillas urbanas</h3>
+        <p>$25.000</p>
+        <section>
+        <button class="add-to-cart">Agregar al carrito</button>
+        <button class="add-to-cart">Comprar</button>
+        </section>
+      </div>
+      <div class="card">
+        <img src="assets/images/reloj.jpg" alt="Producto 3">
+        <h3>Reloj clásico</h3>
+        <p>$40.000</p>
+        <section>
+        <button class="add-to-cart">Agregar al carrito</button>
+        <button class="add-to-cart">Comprar</button>
+        </section>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contacto -->
+  <section id="contacto" class="contacto">
+    <h2>Contacto</h2>
+    <p>📍 Dirección: Av. Ficticia 456, Buenos Aires</p>
+    <p>📞 Teléfono: +54 11 36575147</p>
+    <div>
+    <p>✉️ Email:  
+    <a href="mailto:agencia.alphaloop@gmail.com"> ventas@shop-demo.com</a>
+    </p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>&copy; 2026 Agencia AlphaLoop. Todos los derechos reservados.</p>
+  </footer>
+
+  <script src="scripts/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+.carousel {
+  background: linear-gradient(135deg, var(--color-primary), #6366f1);
+  color: var(--color-white);
+  padding: 4rem 1rem;
+}
+
+.carousel__content {
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+.carousel__title {
+  font-size: 2rem;
+  font-weight: 800;
+}
+
+.carousel__subtitle {
+  margin: 1rem 0 2rem;
+  max-width: 500px;
+}
+
+.carousel__actions {
+  display: flex;
+  gap: 1rem;
+}
+
+.carousel__media {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .carousel {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+  }
+
+  .carousel__media {
+    display: block;
+  }
+}

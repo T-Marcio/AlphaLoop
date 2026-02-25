@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AlphaLoop Demo Restaurante</title>
+  <link rel="stylesheet" href="styles/styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Open+Sans&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header">
+    <h1>AlphaLoop Restaurante Demo</h1>
+    <nav>
+      <ul>
+        <li><a href="#hero">Inicio</a></li>
+        <li><a href="#menu">Menú</a></li>
+        <li><a href="#reservas">Reservas</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero -->
+  <section id="hero" class="hero">
+    <div class="overlay">
+      <h2>Sabores auténticos</h2>
+      <p>Una experiencia gastronómica única</p>
+      <a href="#reservas" class="cta">Reservar mesa</a>
+    </div>
+  </section>
+
+  <!-- Carousel -->
+  <section class="carousel">
+    <h2>Ambiente & Platos</h2>
+    <div class="carousel-container" id="carousel">
+      <img src="assets/images/restaurante-1.jpg" alt="Plato 1">
+      <img src="assets/images/restaurante-2.jpg" alt="Plato 2">
+      <img src="assets/images/ambiente.jpg" alt="Ambiente">
+    </div>
+  </section>
+
+  <!-- Menú -->
+  <section id="menu" class="menu">
+    <h2>Menú Destacado</h2>
+    <div class="grid">
+      <div class="card">
+        <img src="assets/images/Bruschetta.jpg" alt="Bruschetta">
+        <h3>Bruschetta</h3>
+        <p>$1200</p>
+      </div>
+      <div class="card">
+        <img src="assets/images/bife-de-chorizo.jpg" alt="Bife de chorizo">
+        <h3>Bife de chorizo</h3>
+        <p>$4500</p>
+      </div>
+      <div class="card">
+        <img src="assets/images/tiramisu.jpg" alt="Tiramisú">
+        <h3>Tiramisú</h3>
+        <p>$2000</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Reservas -->
+  <section id="reservas" class="reservas">
+    <h2>Reservar mesa</h2>
+    <form>
+      <input type="text" placeholder="Nombre completo" required>
+      <input type="num" placeholder="Número de DNI" required>
+      <input type="date" required>
+      <input type="time" required>
+      <select required>
+        <option value="">Cantidad de personas</option>
+        <option>2</option>
+        <option>4</option>
+        <option>6</option>
+      </select>
+      <input type="num" placeholder="Ingrese cantidad de personas">
+      <button type="submit">Enviar solicitud</button>
+    </form>
+  </section>
+
+  <!-- Contacto -->
+  <section id="contacto" class="contacto">
+    <h2>Contacto</h2>
+    <p>📍 Dirección: Calle Ramón Falcon 123, Buenos Aires</p>
+    <p>📞 Teléfono: +54 11 36575147</p>
+    <div>
+    <p>✉️ Email:  
+    <a href="mailto:agencia.alphaloop@gmail.com"> contacto@restaurante-demo.com</a>
+    </p>
+    </div>
+    
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>&copy; 2026 Agencia AlphaLoop. Todos los derechos reservados.</p>
+  </footer>
+
+  <script src="scripts/scripts.js"></script>
+</body>
+</html>

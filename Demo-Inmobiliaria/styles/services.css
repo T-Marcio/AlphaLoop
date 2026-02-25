@@ -1,0 +1,23 @@
+.services {
+  background-color: var(--color-white);
+  padding: 4rem 1rem;
+}
+
+.services__grid {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  display: grid;
+  gap: 1.5rem;
+}
+
+.service-card {
+  background-color: var(--color-bg);
+  padding: 1.5rem;
+  border-radius: var(--border-radius);
+}
+
+@media (min-width: 768px) {
+  .services__grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
