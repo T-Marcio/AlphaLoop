@@ -34,6 +34,21 @@ jobs:
       - name: Build
         run: npm run build
 
+      - name: Copy static `src` files into docs
+        run: |
+          echo "Copying src/components and src/pages into docs..."
+          mkdir -p docs/src
+          if [ -d src/components ]; then
+            cp -R src/components docs/src/ || true
+          fi
+          if [ -d src/pages ]; then
+            cp -R src/pages docs/src/ || true
+          fi
+          # ensure favicon exists to avoid 404
+          if [ ! -f docs/favicon.ico ]; then
+            touch docs/favicon.ico
+          fi
+
       - name: Deploy to gh-pages
         uses: peaceiris/actions-gh-pages@v4
         with:
