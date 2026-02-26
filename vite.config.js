@@ -6,7 +6,7 @@ const envBase = process.env.VITE_BASE
 const base = envBase || './'
 
 export default defineConfig({
-  base: '/AlphaLoop/',
+  base: './',
   plugins: [
     tailwindcss(),
   ],
