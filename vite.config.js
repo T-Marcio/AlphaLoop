@@ -1,16 +1,15 @@
 import { defineConfig } from 'vite'
 import tailwindcss from '@tailwindcss/vite'
 
-// Use VITE_BASE when set by CI (GitHub Actions). Defaults to './' for local dev.
-const envBase = process.env.VITE_BASE
-const base = envBase || './'
+const base = process.env.VITE_BASE || './'
 
 export default defineConfig({
-  base: './',
+  base: './', //compatible con github y netlify
   plugins: [
     tailwindcss(),
   ],
   build: {
-    outDir: 'docs'
+    outDir: 'dist', //dist estandar
+    emptyOutDir: true
   }
 })
