@@ -14,21 +14,21 @@ export default defineConfig({
         { src: 'src/pages/portfolio.html', dest: ''},
         { src: 'src/pages/pricing.html', dest: ''},
         { src: 'src/pages/blog.html', dest: ''},
-        { src: 'src/pages/contact.html', dest: ''} 
+        { src: 'src/pages/contact.html', dest: ''}
       ]
     })
   ],
   build: {
     outDir: 'dist',
-    emptyOutDir: true
-    /*rollupOptions: {
+    emptyOutDir: true,
+    rollupOptions: {
       input: {
-        main: resolve(__dirname, 'index.html'),
-        portfolio: resolve(__dirname, 'src/pages/portfolio.html'),
-        pricing: resolve(__dirname, 'src/pages/pricing.html'),
-        blog: resolve(__dirname, 'src/pages/blog.html'),
-        contact: resolve(__dirname, 'src/pages/contact.html'),
+        DemoBlog: resolve(__dirname, 'Demo-Blog/index.html'),
+        DemoEcommerce: resolve(__dirname, 'Demo-Ecommerce/index.html'),
+        DemoInmobiliaria: resolve(__dirname, 'Demo-Inmobiliaria/index.html'),
+        DemoLanding: resolve(__dirname, 'Demo-Landing/index.html'),
+        DemoRestaurante: resolve(__dirname, 'Demo-Restaurante/index.html'),
       }
-    }*/
+    }
   }
 })
