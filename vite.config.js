@@ -10,18 +10,18 @@ export default defineConfig({
     viteStaticCopy({
       targets: [
         { src: 'src/components/header.html', dest: ''}, //copia a dist
-        { src: 'src/components/footer.html', dest: ''}
-       /* { src: 'src/pages/portfolio.html', dest: ''},
+        { src: 'src/components/footer.html', dest: ''},
+        { src: 'src/pages/portfolio.html', dest: ''},
         { src: 'src/pages/pricing.html', dest: ''},
         { src: 'src/pages/blog.html', dest: ''},
-        { src: 'src/pages/contact.html', dest: ''} */
+        { src: 'src/pages/contact.html', dest: ''} 
       ]
     })
   ],
   build: {
     outDir: 'dist',
-    emptyOutDir: true,
-    rollupOptions: {
+    emptyOutDir: true
+    /*rollupOptions: {
       input: {
         main: resolve(__dirname, 'index.html'),
         portfolio: resolve(__dirname, 'src/pages/portfolio.html'),
@@ -29,6 +29,6 @@ export default defineConfig({
         blog: resolve(__dirname, 'src/pages/blog.html'),
         contact: resolve(__dirname, 'src/pages/contact.html'),
       }
-    }
+    }*/
   }
 })
