@@ -1,10 +1,8 @@
 import { defineConfig } from 'vite'
 import tailwindcss from '@tailwindcss/vite'
 
-const base = process.env.VITE_BASE || './'
-
 export default defineConfig({
-  base: './', //compatible con github y netlify
+  base: '/AlphaLoop/', //compatible con github y netlify
   plugins: [
     tailwindcss(),
   ],
