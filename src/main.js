@@ -1,8 +1,8 @@
 //Carga header.html en cada página
-fetch('/src/components/header.html')
+fetch('./header.html')
   .then(response => response.text())
   .then(html => {
-    document.body.insertAdjacentHTML('afterbegin', html);
+    document.querySelector('header').innerHTML = html;
   
     //activa lógica del menú móvil (sin esperar DOMContentLoaded ya que insertamos tras cargar)
     const menuBtn = document.getElementById('menu-btn');
@@ -40,6 +40,51 @@ fetch('/src/components/header.html')
 .catch(error => {
   console.error('Error al cargar el header:', error);
 });
+/*
+//Carga imágenes de assets (si es necesario para alguna lógica adicional)
+const articles =import.meta.glob('./assets/articles/*.{jpg,png,svg}', { eager: true });
+const icons = import.meta.glob('./assets/icons/*.{svg,png}', { eager: true });
+const images = import.meta.glob('./assets/images/*.{jpg,png}', { eager: true });
+const portfolio = import.meta.glob('./assets/portfolio/*.{jpg,png}', { eager: true });
+//convierte a un array de objetos con nombre y URL
+const articleImages = Object.values(articles).map(img => img.default);
+const iconImages = Object.values(icons).map(img => img.default);
+const imageImages = Object.values(images).map(img => img.default);
+const portfolioImages = Object.values(portfolio).map(img => img.default);
+//renderiza artículos dinámicamente en el DOM
+const articlesContainer = document.querySelector('#articles-container');
+const iconsContainer = document.querySelector('#icons-container');
+const imagesContainer = document.querySelector('#images-container');
+const portfolioContainer = document.querySelector('#portfolio-container');
+
+articleImages.forEach((src) => {
+  const img = document.createElement('img')
+  img.src = src
+  img.className = "rounded shadow-lg w-48 m-2"
+  articlesContainer.appendChild(img)
+})
+
+iconImages.forEach((src) => {
+  const img = document.createElement('img')
+  img.src = src
+  img.className = "rounded shadow-lg w-48 m-2"
+  iconsContainer.appendChild(img)
+})
+
+imageImages.forEach((src) => {
+  const img = document.createElement('img')
+  img.src = src
+  img.className = "rounded shadow-lg w-48 m-2"
+  imagesContainer.appendChild(img)
+})
+
+portfolioImages.forEach((src) => {
+  const img = document.createElement('img')
+  img.src = src
+  img.className = "rounded shadow-lg w-48 m-2"
+  portfolioContainer.appendChild(img)
+})
+*/
 
 //Carousel básico: alterna imágenes cada 3 segundos
 document.querySelectorAll('.carousel').forEach(carousel => {
@@ -55,7 +100,7 @@ document.querySelectorAll('.carousel').forEach(carousel => {
 });
 
 //carga footer.html en cada página
-fetch('/src/components/footer.html')
+fetch('./footer.html')
   .then(response => response.text())
   .then(html => {
     document.body.insertAdjacentHTML('beforeend', html);
