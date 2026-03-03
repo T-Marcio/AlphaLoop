@@ -1,5 +1,5 @@
 //Carga header.html en cada página
-fetch('${base}header.html')
+fetch(`${base}header.html`)
   .then(response => response.text())
   .then(html => {
     document.querySelector('header').innerHTML = html;
