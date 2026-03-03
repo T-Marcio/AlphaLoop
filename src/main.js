@@ -1,5 +1,5 @@
 //Carga header.html en cada página
-fetch('/components/header.html')
+fetch('/src/components/header.html')
   .then(response => response.text())
   .then(html => {
     document.body.insertAdjacentHTML('afterbegin', html);
@@ -55,7 +55,7 @@ document.querySelectorAll('.carousel').forEach(carousel => {
 });
 
 //carga footer.html en cada página
-fetch('/components/footer.html')
+fetch('/src/components/footer.html')
   .then(response => response.text())
   .then(html => {
     document.body.insertAdjacentHTML('beforeend', html);
