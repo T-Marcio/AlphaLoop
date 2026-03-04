@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <title>Planes y Precios - Mi Agencia</title>
+    <link rel="stylesheet" href="/src/styles/tailwind.css">
+  </head>
+  <body class="bg-gray-50 text-gray-900">
+    <!-- El header y el footer se cargan dinámicamente desde main.js -->
+
+    <main class="pt-24 p-12 mb-24">
+      <h1 class="text-3xl font-bold text-teal-600">Planes y Precios</h1>
+      <p class="mt-4 text-gray-700 text-center">Ofrecemos planes flexibles para adaptarnos a las necesidades de cada cliente. 
+        Sólo tienes que contactarte con nosotros, tenemos una opción para ti.
+        Nuestros planes incluyen servicios de diseño web, desarrollo personalizado, mantenimiento y soporte continuo.
+        Elige el plan que mejor se adapte a tu negocio y comienza a construir tu presencia en línea con nosotros.
+      </p>
+
+      <!--Grid de planes-->
+      <div class="grid md:grid-cols-3 gap-8 mt-12">
+
+        <!--Plan Básico-->
+        <div class="bg-white shadow-lg rounded-lg p-8 text-center transform transition duration-300 hover:-translate-y-2 hover:shadow-2xl">
+          <h2 class="text-2xl font-semibold text-teal-600">Plan Básico</h2>
+          <p class="mt-2 text-gray-600">Ideal para pequeños negocios o proyectos iniciales que necesitan una presencia online.</p>
+          <p class="mt-4 text-3xl font-bold text-gray-900">Desde U$199</p>
+          <ul class="mt6 text-gray-700 space-y-2">
+            <li>✔Página única</li>
+            <li>✔Diseño responsivo</li>
+            <li>✔Soporte básico</li>
+            <li>✔Integración de redes sociales</li>
+          </ul>
+          <a href="/src/pages/contact.html#contacto"
+            class="mt-6 inline-block bg-teal-600 text-white px-6 py-3 rounded hover:bg-teal-700 transition">
+            Contratar
+          </a>
+        </div>
+
+        <!--Plan Profesional-->
+        <div class="bg-white shadow-lg rounded-lg p-8 text-center border-2 border-teal-600 transform transition duration-300 hover:-translate-y-2 hover:shadow-2xl">
+          <h2 class="text-2xl font-semibold text-teal-600">Plan Profesional</h2>
+          <p class="mt-2 text-gray-600">Perfecto para empresas que requieren un sitio web más completo y funcional.</p>
+          <p class="mt-4 text-3xl font-bold text-gray-900">Desde U$ 599</p>
+          <ul class="mt6 text-gray-700 space-y-2">
+            <li>✔Multipágina hasta 5 secciones</li>
+            <li>✔Diseño personalizado</li>
+            <li>✔Integración de redes sociales</li>
+            <li>✔Optimización SEO</li>
+            <li>✔Formulario de contacto avanzado</li>
+          </ul>
+          <a href="/src/pages/contact.html#contacto"
+            class="mt-6 inline-block bg-teal-600 text-white px-6 py-3 rounded hover:bg-teal-700 transition">
+            Contratar
+          </a>
+        </div>
+
+        <!--Plan Premium-->
+        <div class="bg-white shadow-lg rounded-lg p-8 text-center transform transition duration-300 hover:-translate-y-2 hover:shadow-2xl">
+          <h2 class="text-2xl font-semibold text-teal-600">Plan Premium</h2>
+          <p class="mt-2 text-gray-600">La solución completa para negocios que buscan destacar con una presencia online robusta y profesional.</p>
+          <p class="mt-4 text-3xl font-bold text-gray-900">Desde U$1199</p>
+          <ul class="mt6 text-gray-700 space-y-2">
+            <li>✔Todo lo del plan profesional</li>
+            <li>✔integración con e-commerce</li>
+            <li>✔Diseño exclusivo</li>
+            <li>✔Soporte prioritario</li>
+            <li>✔Capacitación básica para administrar el sitio</li>
+            <li>✔Branding visual premium</li>
+          </ul>
+          <a href="/src/pages/contact.html#contacto"
+            class="mt-6 inline-block bg-teal-600 text-white px-6 py-3 rounded hover:bg-teal-700 transition">
+            Contratar
+          </a>
+        </div>
+      </div>
+    </main>
+    <div>
+
+      <p class="text-teal-600 text-center mb-6">el valor del precio final depende del alcance del proyecto</p>
+      <p class="text-gray-700 text-center mb-8">¿Tienes preguntas o quieres discutir tu idea de proyecto?
+        Contáctanos y te responderemos a la brevedad. Estamos aquí para ayudarte a llevar tu presencia en línea
+        al siguiente nivel con un sitio web a medida que se adapte a tus necesidades y objetivos comerciales.</p>
+      </p>
+      <div class="flex justify-center space-x-4">
+        <a href="mailto:agencia.alphaloop@gmail.com" class="bg-teal-600 text-white px-6 py-3 rounded hover:bg-teal-700 transition" 
+          >Enviar Correo</a>
+        <a href="https://wa.me/1136575147" target="_blank" aria-label="WhatsApp" class="bg-teal-600 text-white px-6 py-3 rounded hover:bg-teal-700 transition" 
+          >Contactar por WhatsApp</a>
+    </div>
+
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
