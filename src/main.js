@@ -1,67 +1,64 @@
 import './styles/tailwind.css'
-//Carga header.html en cada página
-fetch(`${import.meta.env.BASE_URL}header.html`)
-  .then(response => response.text())
-  .then(html => {
-    document.body.insertAdjacentHTML('beforeend', html);
-  
-    //activa lógica del menú móvil (sin esperar DOMContentLoaded ya que insertamos tras cargar)
-    const menuBtn = document.getElementById('menu-btn');
-    const mobileMenu = document.getElementById('mobile-menu');
-    const iconClose = document.getElementById('icon-close');
-    const iconOpen = menuBtn ? menuBtn.querySelector('svg:not(.hidden)') : null;
 
-    if(menuBtn && mobileMenu) {
-      menuBtn.addEventListener('click', () => {
-        const isHidden = mobileMenu.classList.contains('hidden');
-        // Si el menú está oculto, se muestra con animación
-        if(isHidden){
-          mobileMenu.classList.remove('hidden');
-          if(iconOpen) iconOpen.classList.add('hidden');
-          if(iconClose) iconClose.classList.remove('hidden');
-        } else {
-          // Si el menú está visible, se oculta con animación
-          mobileMenu.classList.add('hidden');
-          if(iconOpen) iconOpen.classList.remove('hidden');
-          if(iconClose) iconClose.classList.add('hidden');
-        }
-      });
-    }
+//funcion reutilizable para cargar componentes
+async function loadComponent(id, file) {
+  try {
+    const response = await fetch(`${import.meta.env.BASE_URL}${file}`);
+    const html = await response.text();
+    document.getElementById(id).innerHTML = html;
+  } catch (error) {
+    console.error(`Error al cargar ${file}:`, error);
+  }
+}
 
-    //cerrar menú al hacer click en un enlace
-    const menuLinks = document.querySelectorAll('#mobile-menu a');
-    menuLinks.forEach(link => {
-      link.addEventListener('click', () => {
+//cargar header y footer
+loadComponent("header", "header.html");
+loadComponent("footer", "footer.html");
+
+//lógica despues de cargar el header
+document.addEventListener('DOMContentLoaded', () => {
+
+  //menú móvil
+  const menuBtn = document.getElementById('menu-btn');
+  const mobileMenu = document.getElementById('mobile-menu');
+  const iconClose = menuBtn ? menuBtn.querySelector('icon-close') : null;
+  const iconOpen = menuBtn ? menuBtn.querySelector('svg:not(.hidden)') : null;
+
+  if(menuBtn && mobileMenu) {
+    menuBtn.addEventListener('click', () => {
+      const isHidden = mobileMenu.classList.contains('hidden');
+      if(isHidden){
+        mobileMenu.classList.remove('hidden');
+        if(iconOpen) iconOpen.classList.add('hidden');
+        if(iconClose) iconClose.classList.remove('hidden');
+      }
+      else {
         mobileMenu.classList.add('hidden');
         if(iconOpen) iconOpen.classList.remove('hidden');
         if(iconClose) iconClose.classList.add('hidden');
-      });
+      }
     });
-  })
-.catch(error => {
-  console.error('Error al cargar el header:', error);
-});
-
-//Carousel básico: alterna imágenes cada 3 segundos
-document.querySelectorAll('.carousel').forEach(carousel => {
-  const images = carousel.querySelectorAll('img');
-  let index = 0;
-
-  setInterval(() => {
-    images.forEach((img, i) => {
-      img.classList.toggle('hidden', i !== index);
+  }
+  
+  //cerrar menú al hacer click en un enlace
+  document.querySelectorAll('#mobile-menu a').forEach(link => {
+    link.addEventListener('click', () => {
+      mobileMenu.classList.add('hidden');
+      if(iconOpen) iconOpen.classList.remove('hidden');
+      if(iconClose) iconClose.classList.add('hidden');
     });
-    index = (index + 1) % images.length;
-  }, 4000);
-});
-
-//carga footer.html en cada página
-fetch('./footer.html')
-  .then(response => response.text())
-  .then(html => {
-    document.body.insertAdjacentHTML('beforeend', html);
-  })
-  .catch(error => {
-    console.error('Error al cargar el footer:', error);
   });
 
+  //Carousel básico: alterna imágenes cada 4 segundos
+  document.querySelectorAll('.carousel').forEach(carousel => {
+    const images = carousel.querySelectorAll('img');
+    let index = 0;
+
+    setInterval(() => {
+      images.forEach((img, i) => {
+        img.classList.toggle('hidden', i !== index);
+      });
+      index = (index + 1) % images.length;
+    }, 4000);
+  });
+});
