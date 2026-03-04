@@ -1,3 +1,4 @@
+import './styles/tailwind.css'
 //Carga header.html en cada página
 fetch(`${import.meta.env.BASE_URL}header.html`)
   .then(response => response.text())
