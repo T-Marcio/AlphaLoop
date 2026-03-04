@@ -3,6 +3,9 @@ import tailwindcss from '@tailwindcss/vite'
 
 export default defineConfig({
   base: '/AlphaLoop/', //nombre del proyecto en GitHub Pages
+  build: {
+    outDir: 'docs', //carpeta de salida para GitHub Pages
+  },
   plugins: [
     tailwindcss(),
   ],

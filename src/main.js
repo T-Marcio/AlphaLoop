@@ -1,8 +1,8 @@
 //Carga header.html en cada página
-fetch(`${base}header.html`)
+fetch(`${import.meta.env.BASE_URL}header.html`)
   .then(response => response.text())
   .then(html => {
-    document.querySelector('header').innerHTML = html;
+    document.body.insertAdjacentHTML('beforeend', html);
   
     //activa lógica del menú móvil (sin esperar DOMContentLoaded ya que insertamos tras cargar)
     const menuBtn = document.getElementById('menu-btn');
@@ -108,3 +108,4 @@ fetch('./footer.html')
   .catch(error => {
     console.error('Error al cargar el footer:', error);
   });
+
