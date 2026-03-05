@@ -74,12 +74,11 @@ const demos = [
 const buttons = document.querySelectorAll(".btn-demo")
 buttons.forEach(button => {
 
-  const demoName = button.dataset.demo
-  const demo = demos.find(d => d.name === demoName)
+  const name = button.dataset.demo
+  const demo = demos.find(d => d.name === name)
 
   if (demo) {
     button.href = demo.link
-    button.target = "_blank"
   }
 })
 
