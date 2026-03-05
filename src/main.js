@@ -63,6 +63,26 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 });
 
+const demos = [
+  {name: "blog", link: "https://t-marcio.github.io/AlphaLoop/demo-blog/"},
+  {name: "e-commerce", link: "https://t-marcio.github.io/AlphaLoop/demo-ecommerce/"},
+  {name: "inmobiliaria", link: "https://t-marcio.github.io/AlphaLoop/demo-inmobiliaria/"},
+  {name: "landing", link: "https://t-marcio.github.io/AlphaLoop/demo-landing/"},
+  {name: "restaurante", link: "https://t-marcio.github.io/AlphaLoop/demo-restaurante/"}
+]
+
+const buttons = document.querySelectorAll(".btn-demo")
+buttons.forEach(button => {
+
+  const demoName = button.dataset.demo
+  const demo = demos.find(d => d.name === demoName)
+
+  if (demo) {
+    button.href = demo.link
+    button.target = "_blank"
+  }
+})
+
 //marcar enlace activo del menú
 const currentPath = window.location.pathname.split('/').pop();
 document.querySelectorAll('nav a').forEach(link => {
