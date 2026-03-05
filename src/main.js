@@ -62,3 +62,12 @@ document.addEventListener('DOMContentLoaded', () => {
     }, 4000);
   });
 });
+
+//marcar enlace activo del menú
+const currentPath = window.location.pathname.split('/').pop();
+document.querySelectorAll('nav a').forEach(link => {
+  const linkPath = link.getAttribute('href');
+  if(linkPath === currentPath) {
+    link.classList.add('text-teal-600', 'font-semibold');
+  }
+});
