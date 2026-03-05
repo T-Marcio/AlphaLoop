@@ -64,11 +64,11 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 const demos = [
-  {name: "blog", link: "https://t-marcio.github.io/AlphaLoop/demo-blog/"},
-  {name: "e-commerce", link: "https://t-marcio.github.io/AlphaLoop/demo-ecommerce/"},
-  {name: "inmobiliaria", link: "https://t-marcio.github.io/AlphaLoop/demo-inmobiliaria/"},
-  {name: "landing", link: "https://t-marcio.github.io/AlphaLoop/demo-landing/"},
-  {name: "restaurante", link: "https://t-marcio.github.io/AlphaLoop/demo-restaurante/"}
+  {name: "demo-blog", link: "https://t-marcio.github.io/AlphaLoop/demo-blog/"},
+  {name: "demo-ecommerce", link: "https://t-marcio.github.io/AlphaLoop/demo-ecommerce/"},
+  {name: "demo-inmobiliaria", link: "https://t-marcio.github.io/AlphaLoop/demo-inmobiliaria/"},
+  {name: "demo-landing", link: "https://t-marcio.github.io/AlphaLoop/demo-landing/"},
+  {name: "demo-restaurante", link: "https://t-marcio.github.io/AlphaLoop/demo-restaurante/"}
 ]
 
 const buttons = document.querySelectorAll(".btn-demo")
