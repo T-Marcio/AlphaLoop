@@ -71,16 +71,16 @@ const demos = [
   {name: "demo-restaurante", link: "https://t-marcio.github.io/AlphaLoop/demo-restaurante/"}
 ]
 
-const buttons = document.querySelectorAll(".btn-demo")
-buttons.forEach(button => {
+const buttons = document.querySelectorAll(".btn-demo");
 
-  const name = button.dataset.demo
-  const demo = demos.find(d => d.name === name)
+buttons.forEach(button => {
+  const name = button.dataset.demo;
+  const demo = demos.find(d => d.name === name);
 
   if (demo) {
-    button.href = demo.link
+    button.href = demo.link;
   }
-})
+});
 
 //marcar enlace activo del menú
 const currentPath = window.location.pathname.split('/').pop();
