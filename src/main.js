@@ -63,6 +63,7 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 });
 
+
 const base = import.meta.env.BASE_URL;
 const demos = {
   "demo-blog": `${base}demo-blog/`,
