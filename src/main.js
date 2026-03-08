@@ -63,22 +63,19 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 });
 
-const demos = [
-  {name: "demo-blog", link: `${base}demo-blog/`},
-  {name: "demo-ecommerce", link: `${base}demo-ecommerce/`},
-  {name: "demo-inmobiliaria", link: `${base}demo-inmobiliaria`},
-  {name: "demo-landing", link: `${base}demo-landing`},
-  {name: "demo-restaurante", link: `${base}demo-restaurante`}
-]
+const base = import.meta.env.BASE_URL;
+const demos = {
+  "demo-blog": `${base}demo-blog/`,
+  "demo-ecommerce": `${base}demo-ecommerce/`,
+  "demo-inmobiliaria": `${base}demo-inmobiliaria/`,
+  "demo-landing": `${base}demo-landing/`,
+  "demo-restaurante": `${base}demo-restaurante/`
+}
 
-const buttons = document.querySelectorAll(".btn-demo");
-
-buttons.forEach(button => {
+document.quertySelectorAll(".btn-demo").array.forEach(button => {
   const name = button.dataset.demo;
-  const demo = demos.find(d => d.name === name);
-
-  if (demo) {
-    button.href = demo.link;
+  if (demos[name]){
+    button.href = demos[name];
   }
 });
 
