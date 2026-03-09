@@ -63,24 +63,19 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 });
 
-
-const base = import.meta.env.BASE_URL;
+// Configurar URLs de demos
 const demos = {
-  "demo-blog": `${base}demo-blog/`,
-  "demo-ecommerce": `${base}demo-ecommerce/`,
-  "demo-inmobiliaria": `${base}demo-inmobiliaria/`,
-  "demo-landing": `${base}demo-landing/`,
-  "demo-restaurante": `${base}demo-restaurante/`
-}
+  "demo-blog":`${import.meta.env.BASE_URL}demos/demo-blog/`,
+  "demo-ecommerce": `${import.meta.env.BASE_URL}demos/demo-ecommerce/`,
+  "demo-inmobiliaria": `${import.meta.env.BASE_URL}demos/demo-inmobiliaria/`,
+  "demo-landing": `${import.meta.env.BASE_URL}demos/demo-landing/`,
+  "demo-restaurante": `${import.meta.env.BASE_URL}demos/demo-restaurante/`
+};
 
-const container = document.getElementById('portfolio');
-demos.forEach(demo => {
-  const button = document.createElement('a');
-  button.textContent = `Ver demo ${demo.name}`;
-  button.href = demo.link;
-  button.target = "_blank"; // abre en nueva pestaña
-  button.classList.add('btn-demo'); // tu clase de estilo
-  container.appendChild(button);
+// Agregar eventos a los botones existentes
+document.querySelectorAll('.btn-demo').forEach(button => {
+  const demoKey = button.dataset.demo.replace('demo-', '');
+  button.href = demos[demoKey];
 });
 
 //marcar enlace activo del menú
