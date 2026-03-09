@@ -20,16 +20,20 @@ function initMobileMenu() {
   const menuBtn = document.getElementById('menu-btn');
   const mobileMenu = document.getElementById('mobile-menu');
 
-  if (!menuBtn || !mobileMenu) return;
+  if (!menuBtn || !mobileMenu) {
+    console.error('Elementos del menú móvil no encontrados');
+    return;
+  }
 
-  const iconClose = menuBtn.querySelector('.icon-close');
   const iconOpen = menuBtn.querySelector('.icon-open');
+  const iconClose = menuBtn.querySelector('.icon-close');
 
+  //toggle del menú móvil e iconos
   menuBtn.addEventListener('click', () => {
-    const isHidden = mobileMenu.classList.contains('hidden');
-    mobileMenu.classList.toggle('hidden', !isHidden);
-    iconOpen.classList.toggle('hidden', !isHidden); //oculta icono hamburguesa cuando el menú esta abierto
-    iconClose.classList.toggle('hidden', isHidden); //muestra icono X cuando el menú esta abierto
+    const isOpen = !mobileMenu.classList.contains('hidden');
+    mobileMenu.classList.toggle('hidden', isOpen);
+    iconOpen.classList.toggle('hidden', !isOpen); //oculta icono hamburguesa cuando el menú esta abierto
+    iconClose.classList.toggle('hidden', isOpen); //muestra icono X cuando el menú esta abierto
   });
 
   // Cerrar menú al hacer clic en enlaces
