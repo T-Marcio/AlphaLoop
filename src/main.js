@@ -73,11 +73,14 @@ const demos = {
   "demo-restaurante": `${base}demo-restaurante/`
 }
 
-document.quertySelectorAll(".btn-demo").array.forEach(button => {
-  const name = button.dataset.demo;
-  if (demos[name]){
-    button.href = demos[name];
-  }
+const container = document.getElementById('portfolio');
+demos.forEach(demo => {
+  const button = document.createElement('a');
+  button.textContent = `Ver demo ${demo.name}`;
+  button.href = demo.link;
+  button.target = "_blank"; // abre en nueva pestaña
+  button.classList.add('btn-demo'); // tu clase de estilo
+  container.appendChild(button);
 });
 
 //marcar enlace activo del menú
