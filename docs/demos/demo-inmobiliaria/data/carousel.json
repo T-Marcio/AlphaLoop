@@ -1,0 +1,16 @@
+[
+  {
+    "id": 1,
+    "title": "Inmobiliaria profesional",
+    "subtitle": "Demo lista para que puedas empezar a mejorar tus ventas con listados, filtros y contacto.",
+    "image": "assets/images/hero.jpg",
+    "ctaPrimary": {
+      "label": "Ver propiedades",
+      "target": "#listings"
+    },
+    "ctaSecondary": {
+      "label": "Planes y precios",
+      "target": "#services"
+    }
+  }
+]
