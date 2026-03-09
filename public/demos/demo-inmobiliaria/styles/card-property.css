@@ -1,0 +1,48 @@
+.properties__header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.properties__grid {
+  display: grid;
+  gap: 1.5rem;
+}
+
+@media (min-width: 640px) {
+  .properties__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.property-card {
+  background-color: var(--color-white);
+  border-radius: var(--border-radius);
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+.property-card__body {
+  padding: 1rem;
+}
+
+.property-card__title {
+  font-size: 1.1rem;
+  margin-bottom: 0.3rem;
+}
+
+.property-card__meta {
+  font-size: 0.8rem;
+  color: var(--color-muted);
+}
+
+.property-card__info {
+  display: flex;
+  justify-content: space-between;
+  margin: 1rem 0;
+}
+
+.property-card__actions {
+  display: flex;
+  gap: 0.5rem;
+}

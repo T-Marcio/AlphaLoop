@@ -1,0 +1,28 @@
+.footer {
+  background-color: #1e1b4b;
+  color: var(--color-white);
+  padding: 3rem 1rem;
+}
+
+.footer__grid {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  display: grid;
+  gap: 2rem;
+}
+
+.footer a {
+  color: var(--color-white);
+}
+
+.footer__copy {
+  text-align: center;
+  margin-top: 2rem;
+  font-size: 0.8rem;
+}
+
+@media (min-width: 768px) {
+  .footer__grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
