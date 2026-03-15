@@ -36,16 +36,6 @@
         <input type="hidden" name="_next" value="https://t-marcio.github.io/AlphaLoop/">
         <!--Redirigir a la página de inicio después de enviar el formulario
         <input type="hidden" name="_next" value="https://t-marcio.github.io/AlphaLoop/">-->
-        <!--mostrar mensaje de éxito-->
-        <div id="mensaje" class="bg-gray-200 text-green-600 font-medium "></div>
-        <script>
-          // Mostrar mensaje de éxito después de enviar el formulario
-          const urlParams = new URLSearchParams(window.location.search);
-          if (urlParams.get('success') === 'true') {
-            document.getElementById('mensaje').textContent = 'Hola, ${nombre}! Tu consulta ha sido enviada con éxito. ¡Gracias por contactarnos! Nos pondremos en contacto contigo pronto.';
-            document.getElementById('mensaje').style.display = 'block';
-          }
-        </script>
         
         <!-- Campos nombre -->
         <div class="mb-4">
@@ -83,6 +73,16 @@
           Enviar
         </button>
       </form>
+      <!--mostrar mensaje de éxito-->
+        <div id="mensaje" class="bg-gray-200 text-green-600 font-medium "></div>
+        <script>
+          // Mostrar mensaje de éxito después de enviar el formulario
+          const urlParams = new URLSearchParams(window.location.search);
+          if (urlParams.get('success') === 'true') {
+            document.getElementById('mensaje').textContent = 'Hola, ${nombre}! Tu consulta ha sido enviada con éxito. ¡Gracias por contactarnos! Nos pondremos en contacto contigo pronto.';
+            document.getElementById('mensaje').style.display = 'block';
+          }
+        </script>
     </main>
 
     <!-- Footer dinamico desde main.js -->
