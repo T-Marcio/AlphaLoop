@@ -68,6 +68,16 @@
           Enviar
         </button>
       </form>
+      <div id="mensaje" style="display:none; margin-top: 20px; color: green;"></div>
+      <script>
+        // Mostrar mensaje de éxito después de enviar el formulario
+        const urlParams = new URLSearchParams(window.location.search);
+        if (urlParams.get('success') === 'true') {
+          document.getElementById('mensaje').textContent = 'Hola, ${nombre}! tu consulta ha sido enviada con éxito. ¡Gracias por contactarnos! Nos pondremos en contacto contigo pronto.';
+          document.getElementById('mensaje').style.display = 'block';
+        }
+      </script>
+      <input type="hidden" name="_next" value="https://t-marcio.github.io/alphaloop/">
     </main>
 
     <!-- Footer dinamico desde main.js -->
