@@ -1,0 +1,1 @@
+import"./modulepreload-polyfill-B5Qt9EMX.js";document.querySelectorAll(".leer-mas").forEach(e=>{e.addEventListener("click",t=>{t.preventDefault(),alert("Este es un demo. El artículo completo no está disponible.")})});

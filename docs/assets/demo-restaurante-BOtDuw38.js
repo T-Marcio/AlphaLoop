@@ -1,0 +1,1 @@
+import"./modulepreload-polyfill-B5Qt9EMX.js";const t=document.getElementById("carousel");let e=0;function r(){e+=250,e>=t.scrollWidth&&(e=0),t.scrollTo({left:e,behavior:"smooth"})}setInterval(r,3e3);document.querySelector(".form-reserva")?.addEventListener("submit",o=>{o.preventDefault(),alert("Reserva enviada (simulación). ¡Gracias por elegirnos!")});

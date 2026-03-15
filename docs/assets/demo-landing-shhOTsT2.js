@@ -1,0 +1,1 @@
+import"./modulepreload-polyfill-B5Qt9EMX.js";document.querySelector(".cta").addEventListener("click",e=>{e.preventDefault(),alert("Este es un demo corporativo. La sección de servicios es ficticia.")});
