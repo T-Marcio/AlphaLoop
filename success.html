@@ -1,12 +1,14 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang ="es">
     <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta charset="UTF-8" />
         <title>¡Gracias por contactarnos! - AlphaLoop</title>
-        <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     </head>
     <body class="bg-gray-50 text-gray-900">
+
+        <!-- Header se carga desde main.js -->
+        <div id="header"></div>
+
         <!--mostrar mensaje de éxito-->
         <div id="mensaje" class="bg-gray-200 text-green-600 font-medium "></div>
         <script>
@@ -17,6 +19,10 @@
             document.getElementById('mensaje').style.display = 'block';
           }
         </script>
+
+        <!-- Footer dinamico desde main.js -->
+        <div id="footer"></div>
+
         <script type="module" src="./src/main.js"></script>
     </body>
 </html>

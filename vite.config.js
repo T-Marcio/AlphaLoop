@@ -14,6 +14,7 @@ export default defineConfig({
         pricing: resolve(__dirname, 'pricing.html'),
         blog: resolve(__dirname, 'blog.html'),
         contact: resolve(__dirname, 'contact.html'),
+        success: resolve(__dirname, 'success.html'),
         articulo1: resolve(__dirname, 'articulo1.html'),
         articulo2: resolve(__dirname, 'articulo2.html'),
         articulo3: resolve(__dirname, 'articulo3.html'),
