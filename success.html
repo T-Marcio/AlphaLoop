@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang ="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>¡Gracias por contactarnos! - AlphaLoop</title>
+        <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    </head>
+    <body class="bg-gray-50 text-gray-900">
+        <!--mostrar mensaje de éxito-->
+        <div id="mensaje" class="bg-gray-200 text-green-600 font-medium "></div>
+        <script>
+          // Mostrar mensaje de éxito después de enviar el formulario
+          const urlParams = new URLSearchParams(window.location.search);
+          if (urlParams.get('success') === 'true') {
+            document.getElementById('mensaje').textContent = 'Hola, ${nombre}! Tu consulta ha sido enviada con éxito. ¡Gracias por contactarnos! Nos pondremos en contacto contigo pronto.';
+            document.getElementById('mensaje').style.display = 'block';
+          }
+        </script>
+        <script type="module" src="./src/main.js"></script>
+    </body>
+</html>
