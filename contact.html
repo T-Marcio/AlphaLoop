@@ -29,6 +29,16 @@
         y nos pondremos en contacto contigo a la brevedad:</p>
       <!-- Formulario de contacto -->
       <form action="https://formsubmit.co/6a4d98af9ae534f814c5fdcc0a90f0b1" method="POST" class="mt-8 bg-white shadow-lg rounded-lg p-8 space-y-6">
+        <!--mostrar mensaje de éxito-->
+        <div id="mensaje" class="bg-gray-200 text-green-600 font-medium "></div>
+        <script>
+          // Mostrar mensaje de éxito después de enviar el formulario
+          const urlParams = new URLSearchParams(window.location.search);
+          if (urlParams.get('success') === 'true') {
+            document.getElementById('mensaje').textContent = 'Hola, ${nombre}! Tu consulta ha sido enviada con éxito. ¡Gracias por contactarnos! Nos pondremos en contacto contigo pronto.';
+            document.getElementById('mensaje').style.display = 'block';
+          }
+        </script>
         <input type="hidden" name="_captcha" value="mensaje">
         
         <!-- Campos nombre -->
@@ -67,16 +77,6 @@
           Enviar
         </button>
       </form>
-      <!--mostrar mensaje de éxito-->
-        <div id="mensaje" class="bg-gray-200 text-green-600 font-medium "></div>
-        <script>
-          // Mostrar mensaje de éxito después de enviar el formulario
-          const urlParams = new URLSearchParams(window.location.search);
-          if (urlParams.get('success') === 'true') {
-            document.getElementById('mensaje').textContent = 'Hola, ${nombre}! Tu consulta ha sido enviada con éxito. ¡Gracias por contactarnos! Nos pondremos en contacto contigo pronto.';
-            document.getElementById('mensaje').style.display = 'block';
-          }
-        </script>
     </main>
 
     <!-- Footer dinamico desde main.js -->
