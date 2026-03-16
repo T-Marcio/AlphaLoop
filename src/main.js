@@ -86,3 +86,10 @@ document.querySelectorAll('nav a').forEach(link => {
     link.classList.add('text-teal-600', 'font-semibold');
   }
 });
+
+// Mostrar mensaje de éxito después de enviar el formulario
+const urlParams = new URLSearchParams(window.location.search);
+if (urlParams.get('success') === 'true') {
+  document.getElementById('mensaje').textContent = 'Hola, ${nombre}! Tu consulta ha sido enviada con éxito. ¡Gracias por contactarnos! Nos pondremos en contacto contigo pronto.';
+  document.getElementById('mensaje').style.display = 'block';
+}
