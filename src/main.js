@@ -1,4 +1,5 @@
 import './styles/tailwind.css'
+import { initMobileMenu } from './mobileMenu.js';
 
 //funcion reutilizable para cargar componentes
 async function loadComponent(id, file) {
@@ -14,36 +15,6 @@ async function loadComponent(id, file) {
   } catch (error) {
     console.error(`Error al cargar ${file}:`, error);
   }
-}
-
-function initMobileMenu() {
-  const menuBtn = document.getElementById('menu-btn');
-  const mobileMenu = document.getElementById('mobile-menu');
-
-  if (!menuBtn || !mobileMenu) {
-    console.error('Elementos del menú móvil no encontrados');
-    return;
-  }
-
-  const iconOpen = menuBtn.querySelector('.icon-open');
-  const iconClose = menuBtn.querySelector('.icon-close');
-
-  //toggle del menú móvil e iconos
-  menuBtn.addEventListener('click', () => {
-    const isOpen = !mobileMenu.classList.contains('hidden');
-    mobileMenu.classList.toggle('hidden', isOpen);
-    iconOpen.classList.toggle('hidden', !isOpen); //oculta icono hamburguesa cuando el menú esta abierto
-    iconClose.classList.toggle('hidden', isOpen); //muestra icono X cuando el menú esta abierto
-  });
-
-  // Cerrar menú al hacer clic en enlaces
-  document.querySelectorAll('#mobile-menu a').forEach(link => {
-    link.addEventListener('click', () => {
-      mobileMenu.classList.add('hidden'); //cierra el menu
-      iconOpen.classList.remove('hidden'); //muestra icono hamburguesa
-      iconClose.classList.add('hidden'); //oculta icono X
-    });
-  });
 }
 
 // Cargar componentes y luego inicializar menú
